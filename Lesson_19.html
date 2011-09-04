@@ -1,62 +1,63 @@
 <html>
  <style type="text/css">
   body {
-	margin: 0;
-	padding: 0;
+	text-align: Center;
 	background: #b0bfc2;
 	color: #444;
     }
   /** Firefox renders differently from IE. priority difference or issue with <div>?  **/
   #container {
 	text-align: left;
-	background: #fff;
+	margin: 0 auto;
+	width: 700px;
+	background: #fdd url(header_base.bmp) repeat-y;
 	border: 1px solid #000;
-	width: 90%;
-	margin: 0;
     }
   h1 {
+	background: #d36832;
+	color: #fff;
+	padding: 1em;
+	margin: 0;
+	border-bottom: 5px solid #387a9b
+    }
+  #nav {
+	float: left;
+	width: 100px;
+	display: inline;
+	margin-left: 20px;
+	padding: 15px;
+    }
+  #nav ul {
 	margin: 0;
 	padding: 0;
-	border-bottom: 1px solid #fff;
-    }
-  h1 img {
-	/** helps remove extra padding from IE **/
-	display: block;
-	border: 0;
-    }
-  ul#topnav {
-	margin: 0;
-	padding: 0 10px;
 	list-style-type: none;
-	background: #036;
+	text-align: right;
     }
-  ul#topnav li {
-	/** book says this should overcome wierd padding in IE **/
-	/** however, I don't see any impact on IE8 **/
-	dispay: inline;
+  #nav li {
+	padding: 0 5px 5px 0;
+    }
+
+  #content {
+	/** saw interesting behavior in Firefox to the #container div while adding these **/
 	float: left;
+	width: 500px;
+	margin-left: 45px;
+	padding: 15px 0;
     }
-  ul#topnav li a {
-	/** float: left; - does not completely work in IE8 **/
-	/** IE adds extra pading witih Display: Block unless width is included **/ 
-	display: block;
-	text-decoration: none;
-	background: #036;
+
+  #footer {
+	clear: both;
+	background: #387a9b;
 	color: #fff;
-	padding: .2em 1em;
-	border-right: 1px solid #fff;
-	border-bottom: 1px solid #fff;
-    }
-  /** Firefox not respecting a:active psusoclass??  **/
-  ul#topnav li a:hover, ul#topnav li a:active {
-	background: #69c;
-	color: #000;
+	padding: 5px 10px;
+	text-align: right;
+	font-size: 80%;
     }
 
  </style>
 
  <head>
-  <title> Lesson 19 - Site Header </title>
+  <title> Lesson 19 - Site Header w/2 columns </title>
  </head>
 
  <body>
@@ -83,7 +84,7 @@
   <li><a href="#">bar</a></li>
  </ul>
  </p>
- <p> how doth the little crocadile improve his shining tail?  He pours the waters of the Nile on every golden scale.</p>
+ <p> How doth the little crocadile improve his shining tail?  He pours the waters of the Nile on every golden scale. The quick brown fox jumps over the lazy dog.  How doth the little crocadile improve his shining tail?  He pours the waters of the Nile on every golden scale. The quick brown fox jumps over the lazy dog.  How doth the little crocadile improve his shining tail?  He pours the waters of the Nile on every golden scale. The quick brown fox jumps over the lazy dog.  How doth the little crocadile improve his shining tail?  He pours the waters of the Nile on every golden scale. The quick brown fox jumps over the lazy dog.  </p>
  </div>
 
  <div id="footer"> 
