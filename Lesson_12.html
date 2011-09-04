@@ -1,0 +1,68 @@
+<html>
+ <head><title> Lesson 12 - Photo Gallery </title></head>
+ <style type="text/css">
+  h1 {
+	text-align: Center; 
+	color: navy;
+	border: 1px solid gray;
+	background: yellow;
+     }
+  h2 {
+	border-bottom: 1px solid;
+     }
+  div.thumbnail {
+	float: left;
+	width: 180px;
+	margin: 0 1em 1em 1em;
+	display: inline;   /** IE 5 fix **/
+	padding: 10px 10px 40px 10px;
+	background: #05a;
+
+	color: #fff;
+	/** centers all child elements? **/
+	text-align: center;   
+     }
+  div.thumbnail img {
+	border: 2px solid #000;
+     }
+  div.thumbnail p {
+     }
+  .clear{
+	/** Forces new line for floating elements **/
+	clear: left;
+	/** IE9 not appearing to respect the 'clear: left' attribute the same way Firefox does **/
+  }
+
+ </style>
+
+ <body>
+ <h1> My photo gallery </h1>
+ <div class="thumbnail">
+   <img src="Flower1.bmp" alt="">
+   <p>A flower from my garden.</p>
+ </div>
+ <div class="thumbnail">
+   <img src="Flower2.bmp" alt="">
+   <p>Cool Picture.</p>
+ </div>
+ <div class="thumbnail">
+   <img src="Flower3.bmp" alt="">
+   <p>Flower in fall.</p>
+ </div>
+
+ <!-- IE9 not appearing to respect the clear class the same way Firefox does with this setup -->
+ <div class="thumbnail clear">
+   <img src="Flower1.bmp" alt="">
+   <p>A clear float flower.</p>
+ </div>
+ <div class="thumbnail">
+   <img src="Flower2.bmp" alt="">
+   <p>Cool Picture.</p>
+ </div>
+ <div class="thumbnail">
+   <img src="Flower3.bmp" alt="">
+   <p>Flower in fall.</p>
+ </div>
+
+ </body>
+</html>

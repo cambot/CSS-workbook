@@ -1,0 +1,96 @@
+<html>
+ <style type="text/css">
+  body {
+	margin: 0;
+	padding: 0;
+	background: #b0bfc2;
+	color: #444;
+    }
+  /** Firefox renders differently from IE. priority difference or issue with <div>?  **/
+  #container {
+	text-align: left;
+	background: #fff;
+	border: 1px solid #000;
+	width: 90%;
+	margin: 0;
+    }
+  h1 {
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #fff;
+    }
+  h1 img {
+	/** helps remove extra padding from IE **/
+	display: block;
+	border: 0;
+    }
+  ul#topnav {
+	margin: 0;
+	padding: 0 10px;
+	list-style-type: none;
+	background: #036;
+    }
+  ul#topnav li {
+	/** book says this should overcome wierd padding in IE **/
+	/** however, I don't see any impact on IE8 **/
+	dispay: inline;
+	float: left;
+    }
+  ul#topnav li a {
+	/** float: left; - does not completely work in IE8 **/
+	/** IE adds extra pading witih Display: Block unless width is included **/ 
+	display: block;
+	text-decoration: none;
+	background: #036;
+	color: #fff;
+	padding: .2em 1em;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+    }
+  /** Firefox not respecting a:active psusoclass??  **/
+  ul#topnav li a:hover, ul#topnav li a:active {
+	background: #69c;
+	color: #000;
+    }
+
+ </style>
+
+ <head>
+  <title> Lesson 19 - Site Header </title>
+ </head>
+
+ <body>
+ <div id="container">
+ <h1> My Site </h1>
+
+ <div id="nav">
+ <ul>
+  <li><a href="#">foo</a></li>
+  <li><a href="#">bar</a></li>
+  <li><a href="#">biz</a></li>
+  <li><a href="#">zoo</a></li>
+  <li><a href="#">shoe</a></li>
+  <li><a href="#">home</a></li>
+  <li><a href="#">away</a></li>
+ </ul>
+ </div>
+
+ <div id="content">
+ <h2> about my site </h2>
+ <p> data:
+ <ul>
+  <li><a href="#">foo</a></li>
+  <li><a href="#">bar</a></li>
+ </ul>
+ </p>
+ <p> how doth the little crocadile improve his shining tail?  He pours the waters of the Nile on every golden scale.</p>
+ </div>
+
+ <div id="footer"> 
+  copyright @2000 - me
+ </div>
+
+ </div>
+ </body>
+ 
+</html>

@@ -1,0 +1,64 @@
+<html>
+ <style type="text/css">
+  h1#header {
+	text-align: Center;
+	color: navy;
+	font-size: 130%;
+	background: yellow;
+	text-transform: uppercase;
+	letter-spacing: .7em;
+	padding: .6em 0;
+	border-top: 2px solid #069;
+	border-bottom: 2px groove #069;
+    }
+  ul#navigation {
+	margin-left: 0;
+	padding-left: 0;
+	list-style-type: none;
+	float: left;
+	width: 100%;
+	align: center;
+    }
+  ul#navigation li {
+	/** book says this should overcome wierd padding in IE **/
+	/** however, I don't see any impact on IE8 **/
+	dispay: inline;
+	float: left;
+    }
+  ul#navigation a {
+	/** float: left; - does not completely work in IE8 **/
+	/** IE adds extra pading witih Display: Block unless width is included **/ 
+	display: block;
+	text-decoration: none;
+	background: #036;
+	color: #fff;
+	padding: .2em 1em;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+    }
+  ul#navigation a:hover, ul#navigation a:active {
+	background: #69c;
+	color: #000;
+    }
+
+
+ </style>
+
+ <head>
+  <title> Lesson 16 - horizontal nav bar </title>
+ </head>
+
+ <body>
+ <h1 id="header"> Things to do </h1>
+ <ul id="navigation">
+  <li><a href="#">foo</a></li>
+  <li><a href="#">bar</a></li>
+  <li><a href="#">biz</a></li>
+  <li><a href="#">zoo</a></li>
+  <li><a href="#">shoe</a></li>
+  <li><a href="#">home</a></li>
+  <li><a href="#">away</a></li>
+ </ul>
+ </body>
+ 
+</html>
