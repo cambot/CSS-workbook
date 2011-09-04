@@ -1,0 +1,68 @@
+<html>
+ <head><title>Lesson 3 - Selector order of precident</title></head>
+ <style type="text/css">
+  h1 {
+	text-align: Center; 
+	color: navy;
+	border: 1px solid gray;
+	background: url(tint.bmp) ;
+     }
+
+  p {
+	color: maroon;
+	font-size: 80%;
+	font-family: arial, helvetica;
+	padding: 1em 2em 3em 4em
+    }
+  p.intro {color: red }
+  p:first-letter {		   /* Psudo-element selector */
+	font-size: 200%;
+	font-weight: bold;
+    }
+
+  ul { list-style: square inside }
+  li { color: blue }   /* Type Selector */
+  li a { font-style: italic }   /* Decendent Selector */
+
+  .intro { font-weight: bold }   /* class selector */
+
+  a.intro { color: green }   /* class selector */
+
+  #nav { color: orange }   /* ID Selector */
+  #nav a { color: orange }   /* ID Selector overrides class selector */
+
+  * {			   /* Universal Selector */
+	margin: 1;
+	padding: 0;
+    }
+  div > p {		   /* Direct decendent selector */
+	color: blue;	   /* IE 8 doesn't appear to respect this, but firefox 5 does */
+    }
+  img { border: 3px solid }   /* Atribute selector */
+ </style>
+
+ <body>
+  <div id="content">
+   <h1> Header 1 </h1>
+   <p class="intro"> Introduction introduction </p>
+   <p> The quick brown fox <a href="#" class="intro">jumps</a> over the lazy dog </p>
+  </div>
+
+  <div id="nav">
+   Link list
+   <ul>
+    <li><a href="#" class="intro">item1</a></li>
+    <li><a href="#">item2</a> (a great link!)</li>
+    <li><a href="#">item3</a></li>
+   </ul>
+  </div>
+
+  <p> Free floating paragraph </p>
+  <img src="small.bmp"/>
+
+  <div id="footer">
+    <p> The quick brown fox <a href="#">jumps</a> over the lazy dog </p>
+  </div>
+
+ </body>
+</html>

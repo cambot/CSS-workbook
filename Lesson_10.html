@@ -1,0 +1,66 @@
+<html>
+ <head><title> Lesson 10 - Linkstyling </title></head>
+ <style type="text/css">
+  h1 {
+	text-align: Center; 
+	color: navy;
+	border: 1px solid gray;
+	background: yellow;
+     }
+  p {
+	color: maroon;
+	font-size: 80%;
+	font-family: arial, helvetica;
+	padding: 1em 2em 3em 4em;
+    }
+
+  a {
+	text-decoration: none;
+	padding: .5em 0;
+	position: relative;
+	background: yellow;
+  }
+  /** Psudo classes: order matters **/
+  a:link { 
+	color: blue; 
+	font-weight: bold;
+	border-bottom: 1px solid blue;
+  }
+  a:visited {
+	color: maroon;
+	font-weight: bold;
+	border-bottom: 1px solid maroon;
+  }
+  a:focus {}
+  a:hover {}
+  a:active {}
+
+  a.external:link { 
+	color: red;
+	border-bottom: 1px solid red;
+	background: url(ExtLink.bmp) no-repeat 100% 0;
+	padding-right: 25px;
+  }
+  a.external:visited { 
+	color: #0f0;
+	font-weight: bold;
+	/** Firefox 5.0 is not properly rendering this background image **/
+	/** but IE 8 does **/
+	background: url(ExtVLink.bmp) no-repeat 100% 0;
+	padding-right: 25px;
+  }
+  a.external:hover { 
+	color: #0fF;
+	font-weight: bold;
+	background: url(ExtVLink.bmp) no-repeat 100% 0;
+	padding-right: 25px;
+  }
+
+ </style>
+
+ <body>
+ <h1> Header 1 </h1>
+ <p> The quick <a href="#5" class="external">brown fox</a> jumps over the lazy dog.</p>
+ <p> The quick brown fox jumps over the <a href=#">lazy dog</a>.</p>
+ </body>
+</html>

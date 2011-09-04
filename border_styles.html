@@ -1,0 +1,48 @@
+<html>
+ <style type="text/css">
+  h1 {
+	text-align: Center;
+	color: navy;
+	font-size: 130%;
+	background: yellow;
+	text-transform: uppercase;
+	letter-spacing: .7em;
+	padding: .6em 0;
+	/** none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset  */
+    }
+
+  /** none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset  */
+  h1#none { border: 4px none;}
+  h1#hidden { border: 4px hidden; }
+  h1#dotted { border: 4px dotted; }
+  h1#dashed { border: 4px dashed; }
+  h1#solid { border: 4px solid; }
+  h1#double { border: 8px double; }
+
+  /**  IE8 appears to not respect h1 color here whereas Firefox 5 does **/
+  h1#groove { border: 8px groove; }
+  h1#ridge { border: 8px ridge; }
+  h1#inset { border: 8px inset; }
+  h1#outset { border: 8px outset; }
+
+ </style>
+
+ <head>
+  <title> different border styles</title>
+ </head>
+
+ <body bgcolor="gray">
+ <!-- none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset  --!>
+ <h1 id="none"> No border </h1>
+ <h1 id="hidden"> Hidden border </h1>
+ <h1 id="dotted"> dotted border </h1>
+ <h1 id="dashed"> dashed border </h1>
+ <h1 id="solid"> solid border </h1>
+ <h1 id="double"> double border </h1>
+ <h1 id="groove"> groove border </h1>
+ <h1 id="ridge"> ridge border </h1>
+ <h1 id="inset"> inset border </h1>
+ <h1 id="outset"> outset border </h1>
+ </body>
+ 
+</html>

@@ -1,0 +1,18 @@
+  p {
+	/* Context Area */
+	border: 1px dotted red;
+	border-top: 2px solid #000;		/* black */
+	border-bottom: 3px solid #00AA00;	/* green */
+	color: rgb(0%, 0%, 100%);		/* blue  */
+	font-family: arial, helvetica;
+
+	margin: 1em 2em;
+	padding: 1em;
+    }
+  /*********
+     margin, padding:
+	1: all
+	2: top+bottom right+left
+	3: top right+left bottom
+	4: top right bottom left
+   *********/

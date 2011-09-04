@@ -1,0 +1,30 @@
+<html>
+ <head><title> Lesson 7 - Font styling shorthand</title></head>
+ <style type="text/css">
+  p {
+	font-size: 80%;
+	font-family: arial, helvetica, sans-serif;
+	line-height: 1.4;
+    }
+  p.intro {
+	text-align: Center;
+	color: #900;
+ 
+	/****
+	font-weight: bold;
+	font-style: italic;
+	font-variant: none;
+	font-size: 120%;
+	line-height: 150%;
+	font-family: arial, helvetica, sans-serif;
+	*****/
+
+	/* Shorthand order:  style variant weight size/height family  */
+	font: italic bold 120%/150% arial, helvetica, sans-serif;
+    } </style>
+
+ <body>
+ <p class="intro"> A very Querty introduction </p>
+ <p> The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.</p>
+ <p> The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p> </body>
+</html>
