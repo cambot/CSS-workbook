@@ -1,0 +1,112 @@
+<html>
+ <style type="text/css">
+  body {
+	margin: 0;
+	padding: 0;
+	font: 90% arial, helvetica, sans-serif; 
+	background: #b0bfc2;
+	color: #444;
+    }
+
+  /**** how do I paint a transparent image?  ***/
+  #container {
+ 	background: url(back2.bmp) repeat-y 100% 0;
+    }
+  #container2 {
+	background: url(header_base.bmp) repeat-y 100% 0;
+    }
+
+  h1 {
+	margin: 0;
+	padding: .5em 3%;
+	color: #fff;
+	background: #d36832;
+	border-bottom: 5px solid #387a9b;
+    }
+  h2, h3 {
+	/** Helps keep margins from spilling out of containers in some browsers **/
+	margin-top: 0;
+    }
+
+  #content {
+	width: 44%;
+	float: left;
+	margin: 1em 3%;
+	display: inline;
+    }
+  #news {
+	width: 24%;
+	float: left;
+	margin: 1em 3%;
+	display: inline;	
+   }
+
+  #nav {
+	width: 14%;
+	float: left;
+	margin: 1em 0 1em 3%;
+	display: inline;
+    }
+  #nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	line-height: 150%;
+	display: inline;
+    }
+
+  #footer {
+	clear: both;
+	background: #387a9b;
+	color: #fff;
+	padding: 5px 3%;
+	text-align: right;
+	font-size: 80%;
+    }
+
+ </style>
+
+ <head>
+  <title> Lesson 21 - 3 columns </title>
+ </head>
+
+ <body>
+ <h1> My Site </h1>
+
+ <div id="container">
+ <div id="container2">
+
+
+  <div id="content">
+  <h2> about my site </h2>
+  <p> How doth the little crocadile improve his shining tail?  He pours the waters of the Nile on every golden scale. The quick brown fox jumps over the lazy dog.  How doth the little crocadile improve his shining tail?  He pours the waters of the Nile on every golden scale. The quick brown fox jumps over the lazy dog.  How doth the little crocadile improve his shining tail?  He pours the waters of the Nile on every golden scale. The quick brown fox jumps over the lazy dog.  How doth the little crocadile improve his shining tail?  He pours the waters of the Nile on every golden scale. The quick brown fox jumps over the lazy dog.  </p>
+  </div>
+
+  <div id="news">
+  <h2> news </h2>
+  <p> How doth the little crocadile improve his shining tail?  He pours the waters of the Nile on every golden scale. The quick brown fox jumps over the lazy dog.  How doth the little crocadile improve his shining tail?  He pours the waters of the Nile on every golden scale. The quick brown fox jumps over the lazy dog.  </p>
+  </div>
+
+
+  <div id="nav">
+  <h3> Sections </h3>
+  <ul>
+   <li><a href="#">foo</a></li>
+   <li><a href="#">bar</a></li>
+   <li><a href="#">biz</a></li>
+   <li><a href="#">zoo</a></li>
+   <li><a href="#">shoe</a></li>
+   <li><a href="#">home</a></li>
+   <li><a href="#">away</a></li>
+  </ul>
+  </div>
+
+  <div id="footer"> 
+   copyright @2000 - me
+  </div>
+
+ </div>
+ </div>
+ </body>
+ 
+</html>

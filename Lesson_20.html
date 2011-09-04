@@ -1,0 +1,120 @@
+<html>
+ <style type="text/css" media="screen">
+  body {
+	text-align: Center;
+	background: #b0bfc2;
+	color: #444;
+    }
+  /** Firefox renders differently from IE. priority difference or issue with <div>?  **/
+  #container {
+	text-align: left;
+	margin: 0 auto;
+	width: 700px;
+	background: #fdd url(header_base.bmp) repeat-y;
+	border: 1px solid #000;
+    }
+  h1 {
+	background: #d36832;
+	color: #fff;
+	padding: 1em;
+	margin: 0;
+	border-bottom: 5px solid #387a9b
+    }
+  #nav {
+	float: left;
+	width: 100px;
+	display: inline;
+	margin-left: 20px;
+	padding: 15px;
+    }
+  #nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: right;
+    }
+  #nav li {
+	padding: 0 5px 5px 0;
+    }
+
+  #content {
+	/** saw interesting behavior in Firefox to the #container div while adding these **/
+	float: left;
+	width: 500px;
+	margin-left: 45px;
+	padding: 15px 0;
+    }
+
+  #footer {
+	clear: both;
+	background: #387a9b;
+	color: #fff;
+	padding: 5px 10px;
+	text-align: right;
+	font-size: 80%;
+    }
+
+ </style>
+
+ <style type="text/css" media="print">
+  body {
+	font: 100% georgia, times, serif;
+	background: #fff;
+	color: #000;
+    }
+  h1 {
+	border-bottom: 1px solid #999;
+	margin-bottom: 1em;
+    }
+  #nav { display: none; }
+  #footer {
+	border-top: 1px solid #999;
+	text-align: right;
+	margin-top: 3em;
+	padding-top: 1em;
+    }
+  a {
+	color: #000;
+	text-decoration: none;
+    }
+ </style>
+
+ <head>
+  <title> Lesson 20 - styling for printing </title>
+ </head>
+
+ <body>
+ <div id="container">
+ <h1> Print Me </h1>
+
+ <div id="nav">
+ <ul>
+  <li><a href="#">foo</a></li>
+  <li><a href="#">bar</a></li>
+  <li><a href="#">biz</a></li>
+  <li><a href="#">zoo</a></li>
+  <li><a href="#">shoe</a></li>
+  <li><a href="#">home</a></li>
+  <li><a href="#">away</a></li>
+ </ul>
+ </div>
+
+ <div id="content">
+ <h2> about my site </h2>
+ <p> data:
+ <ul>
+  <li><a href="#">foo</a></li>
+  <li><a href="#">bar</a></li>
+ </ul>
+ </p>
+ <p> How doth the little crocadile improve his shining tail?  He pours the waters of the Nile on every golden scale. The quick brown fox jumps over the lazy dog.  How doth the little crocadile improve his shining tail?  He pours the waters of the Nile on every golden scale. The quick brown fox jumps over the lazy dog.  How doth the little crocadile improve his shining tail?  He pours the waters of the Nile on every golden scale. The quick brown fox jumps over the lazy dog.  How doth the little crocadile improve his shining tail?  He pours the waters of the Nile on every golden scale. The quick brown fox jumps over the lazy dog.  </p>
+ </div>
+
+ <div id="footer"> 
+  copyright @2000 - me
+ </div>
+
+ </div>
+ </body>
+ 
+</html>
