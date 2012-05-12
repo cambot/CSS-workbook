@@ -11,13 +11,15 @@
 	border-top: 2px solid #069;
 	border-bottom: 2px groove #069;
     }
-  ul#navigation {
-	margin-left: 0;
+  div {
+	margin-left: auto;
+	margin-right: auto;
 	padding-left: 0;
+	width: 60%;
+  }
+  ul#navigation {
 	list-style-type: none;
 	float: left;
-	width: 100%;
-	align: center;
     }
   ul#navigation li {
 	/** book says this should overcome wierd padding in IE **/
@@ -50,6 +52,7 @@
 
  <body>
  <h1 id="header"> Things to do </h1>
+ <div class="topLinks">
  <ul id="navigation">
   <li><a href="#">foo</a></li>
   <li><a href="#">bar</a></li>
@@ -59,6 +62,7 @@
   <li><a href="#">home</a></li>
   <li><a href="#">away</a></li>
  </ul>
+ </div>
  </body>
  
 </html>
