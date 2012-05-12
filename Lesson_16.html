@@ -14,7 +14,6 @@
   div {
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 0;
 	width: 60%;
   }
   ul#navigation {
@@ -42,8 +41,16 @@
 	background: #69c;
 	color: #000;
     }
+  @media screen and (max-width: 770px) {
 
-
+  div {
+	width: 50%;
+  }
+  .navBreak {
+	clear: left;
+	padding: 0 0 0 .5em;  // give illusion of centering center row
+  }
+ }
  </style>
 
  <head>
@@ -58,7 +65,7 @@
   <li><a href="#">bar</a></li>
   <li><a href="#">biz</a></li>
   <li><a href="#">zoo</a></li>
-  <li><a href="#">shoe</a></li>
+  <li class="navBreak"><a href="#">shoe</a></li>
   <li><a href="#">home</a></li>
   <li><a href="#">away</a></li>
  </ul>
