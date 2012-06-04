@@ -11,12 +11,12 @@
 	border-top: 2px solid #069;
 	border-bottom: 2px groove #069;
     }
-  ul#navigation {
+  nav ul {
 	margin-left: 0;
 	padding-left: 0;
 	list-style-type: none;
     }
-  ul#navigation a {
+  nav ul a {
 	/** IE adds extra pading witih Display: Block unless width is included **/ 
 	display: block;
 	width: 7em;
@@ -26,11 +26,11 @@
 	padding: .2em .5em;
 	border-bottom: 1px solid #fff;
     }
-  ul#navigation a:hover {
+  nav ul a:hover {
 	background: #69c;
 	color: #000;
     }
-  ul#navigation li {
+  nav ul li {
 	/** book says this should overcome wierd padding in IE **/
 	/** however, I don't see any impact on IE8 **/
 	dispay: inline;
@@ -45,7 +45,7 @@
 
  <body>
  <h1 id="header"> Things to do </h1>
- <ul id="navigation">
+ <nav> <ul>
   <li><a href="#">foo</a></li>
   <li><a href="#">bar</a></li>
   <li><a href="#">biz</a></li>
@@ -53,7 +53,7 @@
   <li><a href="#">shoe</a></li>
   <li><a href="#">home</a></li>
   <li><a href="#">away</a></li>
- </ul>
+ </ul> </nav>
  </body>
  
 </html>
