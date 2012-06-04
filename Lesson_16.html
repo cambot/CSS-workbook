@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
  <style type="text/css">
   h1#header {
@@ -36,8 +37,13 @@
 	padding: .2em 1em;
 	border-right: 1px solid #fff;
 	border-bottom: 1px solid #fff;
+
+	-webkit-transition: all ease .5s .5s;
+	-moz-transition: all ease .5s .5s;
+	-o-transition: all ease .5s .5s;
+	transition: all ease .5s .5s;
     }
-  ul#navigation a:hover, ul#navigation a:active {
+  ul#navigation a:hover, ul#navigation a:active, ul#navigation a:focus {
 	background: #69c;
 	color: #000;
     }
