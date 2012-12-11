@@ -1,0 +1,64 @@
+<html>
+ <head><title> Generating a table DOM </title></head>
+ <body>
+ <style>
+ table { border: 1px solid #000; background: #39f;}
+ td {border: 1px solid #000; background: #eee;}
+ th {border: 1px solid #000; background: #cfc;}
+ </style>
+
+ <script>
+ 
+function createTable(data) {
+ var table=document.createElement("table");
+ var thead=document.createElement("thead");
+ var tr=createRow(data, 0, true);
+
+ /***
+ for (var i=0; i< data[0].length; i++) {
+   var th=document.createElement("th");
+   var newText=document.createTextNode(data[0][i]);
+   th.appendChild(newText);	//populate <th>
+   tr.appendChild(th);		// add <th> to <tr>
+ }
+ ***/
+ thead.appendChild(tr);
+ table.appendChild(thead);
+
+ var tbody=document.createElement("tbody");
+ for (var j=1; j < data.length; j++) {
+   tr=createRow(data, j, false);
+   tbody.appendChild(tr);
+ }
+ table.appendChild(tbody);
+
+ return table;
+}
+
+function createRow(data, row, isHeader) {
+ var tr=document.createElement("tr");
+ for (var i=0; i< data[row].length; i++) {
+   var td;
+   if (isHeader) { td=document.createElement("th"); }
+   else { td=document.createElement("td"); }
+
+   var newText=document.createTextNode(data[row][i]);
+   td.appendChild(newText);	//populate <th>
+   tr.appendChild(td);		// add <th> to <tr>
+ }
+ return tr;
+
+}
+
+window.onload = function(){
+ var table = createTable([
+ [1, 2, 3, 4, 5],
+ ["one", "two", "three", "four", "five"],
+ ["uno", "dos", "tres", "quatro", "cinco"]
+ ]);
+ document.body.appendChild(table);
+}
+ </script>
+
+ </body>
+</html>

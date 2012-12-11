@@ -1,0 +1,99 @@
+<html>
+ <head><title>Modifying DOM-Lists with Javascript</title></head>
+ <body>
+ <script>
+
+var nr = 1;
+
+/*****
+  DOM Accessor methods
+   - getElementById()		<element id="xxx" ...>
+   - getElementByTagName()	array of elements of a specific type
+
+  Navigating the DOM tree:
+   - e.firstChild
+   - e.lastChild
+   - e.childNodes	(an array)
+   - e.parentNode
+   - e.nextSibling
+   - e.previousSibling
+
+  modifying DOM Tree
+   - createElement()
+   - createTextNode()
+   - setAttribute()
+
+   - appendChild(node)
+   - insertBefore(node, targetToInsertBefore)
+   - removeNode(node)
+   - replaceChild(node, targetToReplace)
+
+
+*****/
+
+/***
+  appends following DOM structure to list:
+  + <li>
+    + [text node]
+***/
+function addItem(flag){
+ var list = document.getElementById("list");
+ var newNode;
+ if (flag == 3) {
+   newNode = list.firstChild.cloneNode(true);
+ }
+ else {
+   newNode = document.createElement("li");
+   nr++;
+   var newTextNode = document.createTextNode("Item " + nr);
+   newNode.appendChild(newTextNode);
+ }
+
+ if (flag == 1 || flag == 3) {
+   list.appendChild(newNode);
+ }
+ if (flag == 2) {
+   list.insertBefore(newNode, list.firstChild);
+ }
+ if (flag == 4) {
+   if (list.childNodes.length == 0) { list.appendChild(newNode); }
+   list.replaceChild(newNode, list.firstChild);
+ }
+}
+
+function removeLast() {
+ var list = document.getElementById("list");
+ if (list.childNodes.length > 0) {
+   list.removeChild(list.lastChild);
+ }
+}
+
+function addLink(){
+ var list = document.getElementById("list");
+ var newNode = document.createElement("li");
+ nr++;
+ var newLink = createLink("Item "+nr, "http://www.google.com");
+ newNode.appendChild(newLink);
+ list.appendChild(newNode);
+
+}
+
+function createLink(text,url){
+ var newLink = document.createElement("a");
+ var newTextNode = document.createTextNode(text);
+ newLink.appendChild(newTextNode);
+ newLink.setAttribute("href",url);
+ return newLink;
+}
+
+ </script>
+ <input type="button" onClick="addItem(2);" value="Add beginning Item"/>
+ <input type="button" onClick="addItem(1);" value="Add Item"/>
+ <input type="button" onClick="addLink();" value="Add Link"/>
+ <br>
+ <input type="button" onClick="addItem(3);" value="Clone Item"/>
+ <input type="button" onClick="addItem(4);" value="Replace First"/>
+ <input type="button" onClick="removeLast();" value="Remove Last"/>
+ <ul id="list"><li>Item 1</li></ul>
+ </body>
+</head>
