@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table { width: 100%; border-collapse: collapse;}
+    tr:nth-of-type(odd) {
+      background: #eee;
+    }
+    th { background: #333; color: white;}
+    th, td {border: 1px solid #ccc; padding: 6px;}
+
+    @media (max-width: 700px) {
+      table, thead, tbody, th, td, tr { display: block; }
+      thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      tr { border: 1px solid #ccc; }
+
+      td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+      }
+
+      td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+      }
+
+      td:nth-of-type(1):before {content: "column 1";}
+      td:nth-of-type(2):before {content: "column 2";}
+      td:nth-of-type(3):before {content: "column 3";}
+
+    }
+  </style>
+</head>
+
+<body>
+<table>
+  <thead>
+    <tr><th>column1</th><th>column2</th><th>column3</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>foo</td><td>bar</td><td>biz</td></tr>
+    <tr><td>django-python</td><td>ruby on rails</td><td>javascript</td></tr>
+    <tr><td>apple</td><td>persimon</td><td>paw paw</td></tr>
+    <tr><td>misc text</td><td>how now brown cow?</td><td>a likely story</td></tr>
+  </tbody>
+</table>
+</body>
+
+</html>
